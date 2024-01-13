@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #007BFF;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .section {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      color: #007BFF;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    h2:hover {
+      color: #0056b3;
+    }
+
+    .details {
+      display: none;
+      padding: 20px;
+      background-color: #f0f0f0;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .show-details {
+      display: block;
+    }
+  </style>
+  <title>Sustainable Recycling</title>
+</head>
+<body>
+
+  <h1>Sustainable Recycling</h1>
+
+  <div class="section">
+    <h2 class="subheading">Advantages of Recycling</h2>
+    <div class="details">Recycling conserves resources, reduces waste, and contributes to a healthier environment,reducing landfill waste, conserving resources, saving energy, and lowering greenhouse gas emissions. Additionally, it promotes sustainable practices and helps preserve biodiversity by decreasing the demand for raw materials.</div>
+  </div>
+
+  <div class="section">
+    <h2 class="subheading">Disadvantages of Recycling</h2>
+    <div class="details">Certain recycling processes may have a high energy cost, and improper sorting can lead to contamination,the cost of collection and processing, potential contamination of recyclables, and the energy required for certain recycling processes. Additionally, not all materials are easily recyclable, and public awareness and participation can vary, affecting overall effectiveness.</div>
+  </div>
+
+  <div class="section">
+    <h2 class="subheading">Ways to Recycle</h2>
+    <div class="details">Practice source separation, use recycling bins, and support recycling programs in your community,participating in local curbside recycling programs, where households can easily separate recyclables like paper, plastic, glass, and cardboard. Additionally, individuals can visit designated recycling centers to drop off materials for proper processing. E-waste, including old electronics, can be responsibly recycled at specialized facilities. </div>
+  </div>
+
+  <script>
+    const subheadings = document.querySelectorAll('.subheading');
+
+    subheadings.forEach(subheading => {
+      subheading.addEventListener('click', () => {
+        subheading.nextElementSibling.classList.toggle('show-details');
+      });
+    });
+  </script>
+
+</body>
+</html>
